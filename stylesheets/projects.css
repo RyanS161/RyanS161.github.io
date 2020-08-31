@@ -1,0 +1,21 @@
+.project {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.projectName {
+  font-size: 26px;
+  vertical-align: middle;
+}
+.projectIcon {
+  height: 23px;
+  vertical-align: middle;
+}
+.projectBody {
+}
+.projectDescription {
+}
+.projectImage {
+  width: 200px;
+}

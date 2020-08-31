@@ -1,0 +1,32 @@
+body {
+  /*
+  background-image: url("media/background2.jpg");
+  background-repeat: no-repeat;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  */
+  background-color: #333333;
+  font-family: "Times New Roman", Times, serif;
+  color:white;
+}
+a {
+  text-decoration: none;
+  color:white;
+}
+.navbar {
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.navitem {
+  font-size: 18px;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 7px;
+}
+.navitem:hover {
+  background-color: #555555;
+  border-radius: 2px;
+}
