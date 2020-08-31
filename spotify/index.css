@@ -1,0 +1,33 @@
+body {
+  margin: 10px;
+  background-color: #212121;
+  color: #1DB954;
+  font-family: monospace;
+}
+input {
+}
+.inputFile::-webkit-file-upload-button {
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  font-size: 16px;
+  color:#1DB954;
+}
+.inputFile::-webkit-file-upload-button:hover {
+  color: red;
+}
+button {
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  font-size: 16px;
+  color:#1DB954;
+}
+button:hover {
+  color: red;
+}
+#resultTable {
+
+}
