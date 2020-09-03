@@ -1,4 +1,5 @@
 const history = [];
+
 document.getElementById("fileInput").oninput = () => {
   let files = document.getElementById('fileInput').files;
   if (files.length <= 0) {
@@ -15,7 +16,7 @@ document.getElementById("fileInput").oninput = () => {
     }
     fr.readAsText(files.item(i));
   }
-};
+}
 
 function artistsByTime() {
   const artists = {};
