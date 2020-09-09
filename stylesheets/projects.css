@@ -2,6 +2,12 @@
   width: 75%;
   margin: auto;
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.item {
+  margin: 0px 10px 0px 10px;
 }
 
 .projectName {
@@ -11,10 +17,6 @@
 .projectIcon {
   height: 23px;
   vertical-align: middle;
-}
-.projectBody {
-}
-.projectDescription {
 }
 .projectImage {
   height: 300px;
