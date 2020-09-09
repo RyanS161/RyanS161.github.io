@@ -36,7 +36,7 @@ function artistsByTime() {
   for (let key in artists) {
     arr.push([key, artists[key]]);
   }
-  return arr.sort(function(a,b){return b[1] - a[1]});
+  return arr.sort((a,b)=> b[1] - a[1]);
 }
 
 function songsByTime() {
@@ -57,7 +57,7 @@ function songsByTime() {
   for (let key in songs) {
     arr.push([key, songs[key]]);
   }
-  return arr.sort(function(a,b){return b[1] - a[1]});
+  return arr.sort((a,b)=> b[1] - a[1]);
 }
 
 function totalTime() {
