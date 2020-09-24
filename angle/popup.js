@@ -4,7 +4,7 @@ function go() {
   let r = document.getElementById('rad').value; // Inches!
   let pos0 = document.getElementById('pos').value; // could be [0,1,2,3]
 
-  let distance = 52; // distance from pivot to center
+  let distance = 53; // distance from pivot to center
   let theta = (hrs + (mins/60)*30); //convert angle to degrees
   let angle = theta;
   let rollingDistance = 0;
@@ -63,12 +63,18 @@ function go() {
       angle = theta - 315;
     }
   }
-  let rad = angle*(3.1415926535/180);
+  console.log(angle);
+  let rad = angle*(Math.PI/180);
+  console.log(rad);
   let d2 = distance*distance + r*r - 2*distance*r*Math.cos(rad);
+  console.log(d2);
   rollingDistance = Math.sqrt(d2);
+  console.log(rollingDistance);
 
   let angleRotRad = Math.asin((r*Math.sin(rad))/rollingDistance);
-  angleRot = angleRotRad*(180/3.1415926535);
+  console.log(angleRotRad);
+  angleRot = angleRotRad*(180/Math.PI);
+  console.log(angleRot);
 
   document.getElementById('angle').innerHTML = angleRot;
   if (CW == 1) {
