@@ -14,20 +14,39 @@ function go() {
   if (pos0 == 0) {
     if (theta > 45 && theta < 225) {
       CW = -1;
-    } else {CW = 1;}}
+    } else if (theta == 45 || theta == 225){
+      CW = 0;
+    } else {
+      CW = 1;
+    }
+  }
   if (pos0 == 1) {
     if (theta > 135 && theta < 315) {
       CW = -1;
+    } else if (theta == 135 || theta == 315) {
+      CW = 0;
     } else {
       CW = 1;
     }
   }
   if (pos0 == 2) {
-    if (theta > 45 && theta < 225) {CW = 1;}
-    else {CW = -1;}}
+    if (theta > 45 && theta < 225) {
+      CW = 1;
+    } else if (theta == 45 || theta == 225) {
+      CW = 0;
+    } else {
+      CW = -1;
+    }
+  }
   if (pos0 == 3) {
-    if (theta > 135 && theta < 315) {CW = 1;}
-    else {CW = -1;}}
+    if (theta > 135 && theta < 315) {
+      CW = 1;
+    } else if (theta == 135 || theta == 315) {
+      CW = 0;
+    } else {
+      CW = -1;
+    }
+  }
 
 
   if (pos0 == 0) {
@@ -77,9 +96,12 @@ function go() {
   console.log(angleRot);
 
   document.getElementById('angle').innerHTML = angleRot;
+  document.getElementById('distance').innerHTML = rollingDistance;
   if (CW == 1) {
-    document.getElementById('CW').innerHTML = "clockwise";
+    document.getElementById('CW').innerHTML = "Clockwise";
+  } else if (CW == -1) {
+    document.getElementById('CW').innerHTML = "Counter-clockwise";
   } else {
-    document.getElementById('CW').innerHTML = "counter-clockwise";
+    document.getElementById('CW').innerHTML = "Straight-on";
   }
 }
