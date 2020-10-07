@@ -1,5 +1,5 @@
 .project {
-  width: 75%;
+  width: 80%;
   margin: auto;
   margin-top: 20px;
   display: flex;
@@ -18,6 +18,9 @@
   height: 23px;
   vertical-align: middle;
 }
+.projectBody {
+  width: 100%;
+}
 .projectImage {
-  height: 300px;
+  width: 100%;
 }
