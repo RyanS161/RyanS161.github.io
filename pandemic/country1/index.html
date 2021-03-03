@@ -3,12 +3,133 @@
   <head>
     <meta charset='utf-8'>
     <title>MUSR</title>
+    <script type="text/javascript" src="../canvasjs-3.2.9/canvasjs.min.js"></script>
     <!--<link rel='stylesheet' href='./stylesheets/main.css'>-->
   </head>
-  <body>
+  <script>
+    let points = 1000; //change for each country
+    let cases = 50;
+    let turns = 1;
+    let data = [{x:-2, y:2},{x:-1, y:16},{x:0, y:32}];
+    let chart;
+    function setup() {
+      document.getElementById("points").innerHTML = points;
+      chart = new CanvasJS.Chart("chartContainer",
+      {title:{text: "Cases per 10,000 people"},
+        data: [{type: "line",dataPoints: data,}]});
+      data.push({x:turns, y:cases});
+      chart.render();
+    }
+    function maskMandate() {
+      if(points >= 200) {
+        cases = cases*.8;
+        points -= 200;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function reduceTravel() {
+      if(points >= 300) {
+        cases = cases*.9;
+        points -= 300;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function vaccine() {
+      if(points >= 500) {
+        cases = cases*.25;
+        points -= 500;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function PPE() {
+      if(points >= 200) {
+        cases = cases*.5;
+        points -= 200;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function openBusiness() {
+      if(points >= 100) {
+        cases = cases*1.25;
+        points -= 100;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function sportingEvents() {
+      if(points >= 25) {
+        cases = cases*1.5;
+        points -= 25;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function cricketTourney() {
+      if(points >= 50) {
+        cases = cases*1.6;
+        points -= 50;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function openSchools() {
+      if(points >= 25) {
+        cases = cases*1.75;
+        points -= 25;
+        document.getElementById("points").innerHTML = points;
+        turns++;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function updateGraph() {
+      data.push({x:turns, y:cases});
+      chart.render();
+    }
+  </script>
+  <body onload="setup()">
+    <h1>Morgan's United Socialist Republic</h1>
+    <h2>Population: 100 million</h2>
+    <p>You are a country well-prepared for future pandemics. Due to your
+      investment in research and personal protective equipment, you have many
+      preparation points to work with.</p>
+    <h1>Prep points:&nbsp<span id="points">0</span></h1>
+    <button onclick='maskMandate()'>Introduce a nation-wide mask mandate (200 points)</button>
+    <button onclick='reduceTravel()'>Reduce air travel (300 points)</button>
+    <button onclick='vaccine()'>Rollout a vaccine (500 points)</button>
+    <button onclick='PPE()'>Stockpile PPE (200 points)</button>
+    <button onclick='openBusiness()'>Open businesses to keep people happy (100 points)</button>
+    <button onclick='sportingEvents()'>Allow sporting events to have fans (25 points)</button>
+    <button onclick='cricketTourney()'>Host an international cricket tournament (50 points)</button>
+    <button onclick='openSchools()'>Open schools and universities (25 points)</button>
 
+
+    <div id="chartContainer" style="height: 500px; width: 50%;"></div>
   </body>
-    <script>
-      document.alert("demo");
-    </script>
 </html>
