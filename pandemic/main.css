@@ -9,6 +9,10 @@
   border-radius: 3px;
 }
 body {
-  background-color: lightblue;
+  background-image: url("background.jpg");
   font-family: monospace;
+  color: white;
+}
+button {
+  margin: 5px;
 }
