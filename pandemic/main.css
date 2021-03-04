@@ -1,3 +1,7 @@
+body {
+  background-color: lightblue;
+  font-family: monospace;
+}
 #progress {
   width: 200px;
   background-color: grey;
