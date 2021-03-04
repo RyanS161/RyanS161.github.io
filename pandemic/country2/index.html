@@ -3,13 +3,255 @@
   <head>
     <meta charset='utf-8'>
     <title>Jennaland</title>
-    <!--<link rel='stylesheet' href='./stylesheets/main.css'>-->
-
+    <script type="text/javascript" src="../canvasjs-3.2.9/canvasjs.min.js"></script>
+    <link rel='stylesheet' href='../main.css'>
   </head>
-  <body>
+  <script>
+    let points = 500;
+    let cases = 50;
+    let turns = 1;
+    let multiplier = 2;
+    let happiness = 80;
+    let happyMultiplier = 1;
+    let madCounter = 0;
+    let data = [{x:-2, y:2},{x:-1, y:16},{x:0, y:32}];
+    let chart;
+    function setup() {
+      document.getElementById("points").innerHTML = points;
+      chart = new CanvasJS.Chart("chartContainer",
+      {title:{text: "Cases per 10,000 people"},
+        data: [{type: "line",dataPoints: data,}]});
+      data.push({x:turns, y:cases});
+      chart.render();
+      document.getElementById("bar").style.width = 2*happiness + "px";
+      document.getElementById("vaccineButton").style.display = "none";
+      document.getElementById("schoolsButton").style.display = "none";
+      document.getElementById("removeMasksButton").style.display = "none";
+      document.getElementById("ppeButton").style.display = "none";
+      document.getElementById("businessButton").style.display = "none";
+    }
+    function maskMandate() {
+      if(points >= 200) {
+        multiplier *= .5;
+        points -= 200;
+        happiness *= .4;
+        happyMultiplier *= .7;
+        updateGraph();
+        document.getElementById("maskButton").style.display = "none";
+        document.getElementById("removeMasksButton").style.display = "block";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function removeMandate() {
+      if(points >= 200) {
+        multiplier *= 2;
+        points -= 200;
+        happiness *= 2;
+        happyMultiplier *= (10/7);
+        updateGraph();
+        document.getElementById("removeMasksButton").style.display = "none";
+        document.getElementById("maskButton").style.display = "block";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function reduceTravel() {
+      if(points >= 300) {
+        multiplier *= .5;
+        points -= 300;
+        happiness *= .6;
+        happyMultiplier *= .8;
+        updateGraph();
+        document.getElementById("travelButton").style.display = "none";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function vaccine() {
+      if(points >= 500) {
+        multiplier = .5;
+        points -= 500;
+        happiness *= 1.5;
+        happyMultiplier *= 1.2;
+        updateGraph();
+        document.getElementById("vaccineButton").style.display = "none";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function PPE() {
+      if(points >= 200) {
+        multiplier *= .5;
+        points -= 200;
+        happyMultiplier *= 1.1;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function openBusiness() {
+      if(points >= 100) {
+        multiplier *= 1.5;
+        points -= 100;
+        happiness *= 1.3;
+        happyMultiplier *= 1.1;
+        updateGraph();
+        document.getElementById("businessButton").style.display = "none";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function sportingEvents() {
+      if(points >= 25) {
+        multiplier *= 1.75;
+        points -= 25;
+        happiness *= 1.4;
+        happyMultiplier *= 1.3;
+        updateGraph();
+        document.getElementById("sportsButton").style.display = "none";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function cricketTourney() {
+      if(points >= 50) {
+        cases = cases*1.5;
+        points -= 50;
+        happiness *= 1.5;
+        updateGraph();
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function openSchools() {
+      if(points >= 25) {
+        multiplier *= 2;
+        points -= 25;
+        happiness *= 1.75;
+        happyMultiplier *= 1.25;
+        updateGraph();
+        document.getElementById("schoolsButton").style.display = "none";
+      } else {
+        alert("You don't have enough prep points for that :(");
+      }
+    }
+    function updateGraph() {
+      document.getElementById("points").innerHTML = points;
+      happiness *= happyMultiplier;
+      turns++;
+      if (happiness > 80) {
+        happiness = 80;
+      }
 
+      if (happiness <= 30) {
+        document.getElementById("bar").style.backgroundColor = "red";
+        madCounter++;
+        if (madCounter == 3) {
+          alert("Citizens are starting become unhappy with pandemic restrictions");
+        } else if (madCounter >= 5 && madCounter % 2 == 1) {
+          alert("Citizens have decided not to wear their masks or social distance anymore");
+          cases *= 1.5;
+          multiplier *= 3;
+          happiness = 55;
+        }
+      } else if (happiness <= 60) {
+        document.getElementById("bar").style.backgroundColor = "orange";
+        madCounter = 0;
+      } else {
+        document.getElementById("bar").style.backgroundColor = "green";
+        madCounter = 0;
+      }
+      document.getElementById("bar").style.width = 2*happiness + "px";
+      cases *= multiplier;
+      if (cases >= 10000) {
+        cases = 10000;
+      } else if (cases < .5) {
+        alert("You beat KeiserVirus! Congratulations on your management of the pandemic!");
+        parent.location='../index.html';
+      }
+      data.push({x:turns, y:cases});
+      chart.render();
+      switch (turns) {
+        case 2:
+          document.getElementById("ppeButton").style.display = "block";
+          break;
+        case 5:
+          document.getElementById("businessButton").style.display = "block";
+          document.getElementById("schoolsButton").style.display = "block";
+          break;
+        case 8:
+          document.getElementById("vaccineButton").style.display = "block";
+          break;
+      }
+      if (turns % 5 == 0) {
+        let buttons = document.getElementsByTagName('button');
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = "none";
+        }
+        let functions = [ppeShortage, cricketSpreader, newStrain, economicProblems, shortages];
+        functions[Math.floor(Math.random() * Math.floor(5))]();
+      }
+    }
+
+    function ppeShortage() {
+      document.getElementById("event").innerHTML =
+      `There has been a shortage of PPE! How will you respond?<br>
+      <button onclick='multiplier *= .8;points -= 200;resetButtons();updateGraph();'>Invest more into PPE (-200 points)</button>
+      <button onclick='multiplier *= 1.2;resetButtons();updateGraph();'>Who needed PPE anyway?</button>`;
+    }
+    function cricketSpreader() {
+      document.getElementById("event").innerHTML =
+      `The nation's beloved cricket games have been spreading KeiserVirus extraordinarily fast!<br>
+      <button onclick='cases *= 1.3;resetButtons();updateGraph();'>That's unfortunate</button>`;
+    }
+    function newStrain() {
+      document.getElementById("event").innerHTML =
+      `A new strain of Keiser has emerged from your neighboring country.<br>
+      <button onclick='multiplier *= .7;points -= 100;happyMultiplier *= .8;resetButtons();updateGraph();'>Further restrict travel (-100 points)</button>
+      <button onclick='multiplier *= 1.5;resetButtons();updateGraph();'>Ehhh, it's probably fine...</button>`;
+    }
+    function economicProblems() {
+      document.getElementById("event").innerHTML =
+      `The stock market has fallen 70%! How will you deal with it?
+      <button onclick='multiplier *= .8;points -= 200;happiness *= 3;resetButtons();updateGraph();'>Economic stimulus packages (-200 points)</button>
+      <button onclick='multiplier *= .95;points -= 50;resetButtons();updateGraph();'>Reduce restrictions on businesses (-50 points)</button>
+      <button onclick='happyMultiplier *= .8; resetButtons();updateGraph();'>I'm sure the redditors will take care of it</button>`;
+    }
+    function shortages() { //change this to shortages later
+      document.getElementById("event").innerHTML =
+      `There has been a shortage of PPE! How will you respond?
+      <button onclick='multiplier *= .8;points -= 200;resetButtons();updateGraph();'>Invest more into PPE (-200 points)</button>
+      <button onclick='multiplier *= 1.3;resetButtons();updateGraph();'>Ehhh, it's probably fine...</button>`;
+    }
+    function resetButtons() {
+      document.getElementById('event').innerHTML = "No events now";
+      let buttons = document.getElementsByTagName('button');
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = "block";
+      }
+    }
+  </script>
+
+  <body onload="setup()">
+    <h1>Jennaland</h1>
+    <h2>Population: 200 million</h2>
+    <p>Your country is slightly prepared, however, your citizens are prone to disobedience.</p>
+    <h2>Prep points:&nbsp<span id="points">0</span></h2>
+    <h2>Citizen happiness:&nbsp<div id="progess"><div id="bar"></div></div></h2>
+    <h3>Information and events:</h3>
+    <p><span id="event" style="background-color:magenta;color:white;padding:5px;">No events now</span></p>
+    <button onclick='maskMandate()' id='maskButton'>Introduce a nation-wide mask mandate (-200 points)</button>
+    <button onclick='removeMandate()' id='removeMasksButton'>Remove mask mandate (-100 points)</button>
+    <button onclick='reduceTravel()' id='travelButton'>Restrict air travel (-300 points)</button>
+    <button onclick='vaccine()' id='vaccineButton'>Rollout a vaccine (-500 points)</button>
+    <button onclick='PPE()' id='ppeButton'>Stockpile PPE (-200 points)</button>
+    <button onclick='openBusiness()' id='businessButton'>Open businesses to keep people happy (-100 points)</button>
+    <button onclick='sportingEvents()' id='sportsButton'>Allow sporting events to have fans (-25 points)</button>
+    <button onclick='cricketTourney()' id='tourneyButton'>Host an international cricket tournament (-50 points)</button>
+    <button onclick='openSchools()' id='schoolsButton'>Open schools and universities (-25 points)</button>
+    <button onclick='updateGraph()' id='nothingButton'>Do nothing</button>
+
+    <div id="chartContainer" style="height: 500px; width: 500px;"></div>
   </body>
-    <script>
-      document.getElementById("demo").innerHTML = "Hello JavaScript!";
-    </script>
 </html>
