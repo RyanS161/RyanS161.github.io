@@ -17,6 +17,13 @@ function setup() {
 
 let books = [
   {
+    "title" : "Caste",
+    "author" : "Isabel Wilkerson",
+    "image" : "caste.jpg",
+    "date" : "April 15th",
+    "description" : "",
+  },
+  {
     "title" : "A Promised Land",
     "author" : "Barack Obama",
     "image" : "aPromisedLand.jpg",
