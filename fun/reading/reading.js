@@ -3,19 +3,30 @@ function setup() {
   for(let x = 0; x < books.length; x++) {
     let shelfItem = document.createElement('div');
     shelfItem.setAttribute('class', 'shelfItem');
-    shelfItem.innerHTML =`<div class='shelfItemInner'>
-                            <div class 'imageContainer'>
-                              <img class='bookImage' src='../../media/bookCovers/${books[x].image}'>
-                            </div>
-                            <div class='shelfItemText'>
-                              <p class="bookTitle"><strong>${books[x].title}</strong><br> by ${books[x].author}<br><br>Read ${books[x].date}</p>
-                            </div>
-                          </div>`;
-  shelf.appendChild(shelfItem);
+    let shelfItemInner = document.createElement('div');
+    shelfItemInner.setAttribute('class', 'shelfItemInner');
+    shelfItemInner.innerHTML = `<div class 'imageContainer'>
+                                  <img class='bookImage' src='../../media/bookCovers/${books[x].image}'>
+                                </div>
+                                <div class='shelfItemText'>
+                                  <p class="bookTitle"><strong>${books[x].title}</strong><br>
+                                                       by ${books[x].author}<br><br>
+                                                       Read ${books[x].date}<br>
+                                                       ${books[x].description}</p>
+                                </div>`;
+     shelfItem.appendChild(shelfItemInner);
+     shelf.appendChild(shelfItem);
   }
 }
 
 let books = [
+  {
+    "title" : "A World Without Bees",
+    "author" : "Alison Benjamin and Brian McCallum",
+    "image" : "aWorldWithoutBees.jpg",
+    "date" : "April 18th",
+    "description" : "",
+  },
   {
     "title" : "Caste",
     "author" : "Isabel Wilkerson",
