@@ -17,8 +17,15 @@ function setup() {
      shelfItem.appendChild(shelfItemInner);
      shelf.appendChild(shelfItem);
   }
+  setReadingBar();
+  window.onresize = setReadingBar;
 }
 
+function setReadingBar() {
+  let readingBarInner = document.getElementById('readingBarInner');
+  readingBarInner.style.width = Math.floor(((books.length<=52) ? (books.length/52) : 1)* readingBar.offsetWidth) + "px";
+  //readingBarInner.innerHTML = `<p style='color:black; font-size:4px;'>${books.length}/52</p>`;
+}
 let books = [
   {
     "title" : "A World Without Bees",

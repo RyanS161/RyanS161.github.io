@@ -6,10 +6,6 @@
   border-radius: 50%;
   width: 17%;
 }
-.portrait:hover {
-  -webkit-filter: blur(1px) grayscale(20%);
-  filter: blur(1px) grayscale(20%);
-}
 .nameTitle {
   font-size: 30px;
   text-align: center;

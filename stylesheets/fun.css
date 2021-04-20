@@ -28,11 +28,13 @@ p {
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
+
 }
 
 .shelfItem:hover .shelfItemInner {
   transform: rotateY(180deg);
 }
+
 .bookImage {
   width: 100%;
 }
@@ -55,26 +57,45 @@ p {
 }
 
 .bookTitle {
+  padding: 10px;
 }
 
 .bookDate {
 
+}
+#readingBar {
+  width: 25%;
+  height: 8px;
+  border: solid white 1px;
+  margin: auto;
+}
+#readingBarInner {
+  background-color: white;
+  height: 8px;
 }
 
 @media only screen and (max-width: 300px) {
   .shelfItem {
     width: 90%;
   }
-
+  #readingBar {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 600px) and (min-width: 300px) {
   .shelfItem {
     width: 45%;
   }
-
+  #readingBar {
+    width: 45%;
+  }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 600px) {
   .shelfItem {
     width: 30%;
   }
+  #readingBar {
+    width: 30%;
+  }
+}
