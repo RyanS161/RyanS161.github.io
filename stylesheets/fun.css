@@ -65,15 +65,22 @@ p {
 }
 #readingBar {
   width: 25%;
-  height: 8px;
+  height: 12px;
   border: solid white 1px;
   margin: auto;
 }
 #readingBarInner {
   background-color: white;
-  height: 8px;
+  height: 12px;
+  
 }
+#readingBarCounter {
+  color: black;
+  font-size: 12px;
+  margin: 0;
 
+
+}
 @media only screen and (max-width: 300px) {
   .shelfItem {
     width: 90%;

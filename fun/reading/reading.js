@@ -22,9 +22,10 @@ function setup() {
 }
 
 function setReadingBar() {
+
   let readingBarInner = document.getElementById('readingBarInner');
-  readingBarInner.style.width = Math.floor(((books.length<=52) ? (books.length/52) : 1)* readingBar.offsetWidth) + "px";
-  //readingBarInner.innerHTML = `<p style='color:black; font-size:4px;'>${books.length}/52</p>`;
+  readingBarInner.style.width = Math.floor(((books.length<52) ? (books.length/52) : .995)* readingBar.offsetWidth) + "px";
+  readingBarInner.innerHTML = `<p id='readingBarCounter'>${books.length}/52</p>`;
 }
 let books = [
   {
