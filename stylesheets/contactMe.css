@@ -1,0 +1,33 @@
+.picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 1%;
+  width: 80%;
+  height: 300px;
+  object-fit: cover;
+}
+.nameTitle {
+  font-size: 30px;
+  text-align: center;
+}
+.introParagraph {
+  font-size: 16px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contactTiles {
+  margin-top: 10px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contactTile {
+  width: 40px;
+  margin: 5px;
+  display: inline;
+}
