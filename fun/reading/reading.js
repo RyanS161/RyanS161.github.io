@@ -29,6 +29,13 @@ function setReadingBar() {
 }
 let books = [
   {
+    "title" : "Not A Scientist",
+    "author" : "Dave Levitan",
+    "image" : "notAScientist.jpg",
+    "date" : "April 20th",
+    "description" : "",
+  },
+  {
     "title" : "A World Without Bees",
     "author" : "Alison Benjamin and Brian McCallum",
     "image" : "aWorldWithoutBees.jpg",
