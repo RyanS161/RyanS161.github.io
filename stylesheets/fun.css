@@ -1,11 +1,25 @@
+.funContent {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, auto);
+}
+@media only screen and (max-width: 1000px) {
+  .funContent {grid-template-columns: repeat(1, auto);}
+}
 h1 {
   text-align: center;
   font-size: 30px;
 }
 
 p {
-  text-align: center;
   font-size: 16px;
+}
+
+#readingTitle {
+  text-align: center;
 }
 
 .shelf {
@@ -72,14 +86,12 @@ p {
 #readingBarInner {
   background-color: white;
   height: 12px;
-  
+
 }
 #readingBarCounter {
   color: black;
   font-size: 12px;
   margin: 0;
-
-
 }
 @media only screen and (max-width: 300px) {
   .shelfItem {

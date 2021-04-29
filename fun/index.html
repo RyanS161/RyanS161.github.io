@@ -3,14 +3,14 @@
   <head>
     <meta charset='utf-8'>
     <title>Ryan Slocum - Fun</title>
-    <meta http-equiv="Refresh" content="0; url='https://www.ryanslocum.com/404.html'" />
+    <!--<meta http-equiv="Refresh" content="0; url='https://www.ryanslocum.com/404.html'" />-->
     <link rel='stylesheet' href='../stylesheets/main.css'>
     <link rel='stylesheet' href='../stylesheets/fun.css'>
     <link rel='stylesheet' href='../stylesheets/projects.css'>
-    <script type="text/javascript" src='./reading/reading.js'></script>
+    <script type="text/javascript" src='./fun.js'></script>
     <link rel="icon" href="../media/icon.png" type="image/png" sizes="16x16">
   </head>
-  <body>
+  <body onload='setFunContent()' >
     <div class='navbar'>
       <a class='navitem' href='../index.html'>Home</a>
       <a class='navitem' href='../projects/index.html'>Projects</a>
@@ -21,8 +21,47 @@
       </span>
       <a class='navitem' href='../contactme/index.html'>Contact Me</a>
     </div>
-    <div class='content'>
-      <h1><a href="./reading/index.html">Reading</a></h1>
+    <div class='funContent'>
+
+      <div class='project'>
+        <div class='item'>
+          <a class='projectName' href='#'>Juggling</a>
+          <p class='projectDescription'>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            I've been juggling since November 2018. It's a skill that I find very
+            enjoyable, because there's so much room for growth. Right now I can
+            juggle five balls, and I am working on six. You can check out the
+            juggling instagram I created a while ago
+            <a href='https://www.instagram.com/ryanjuggles' target="_blank" style='color:green;'>here</a>.
+          </p>
+        </div>
+        <a href='#'><img src='../media/jugglingPhoto.jpg' style='height:300px;'></a>
+      </div>
+
+      <div class='project'>
+        <div class='item'>
+          <a class='projectName' onclick='setHikingContent()'>Hiking</a>
+          <p class='projectDescription' id='hikingDescription'>
+          </p>
+        </div>
+        <a onclick='setHikingContent()'><img id='hikingImage' style='height:300px;'></a>
+      </div>
+
+      <div class='project'>
+        <div class='item'>
+          <a class='projectName' href='./reading/index.html'>Reading</a>
+          <p class='projectDescription'>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            For 2021, I've set a goal of reading 52 books, one for each week of
+            the year. I've made a page with all the books I've read so far
+            <a href='./reading/index.html' style='color:green;'>here</a>. Check it out!
+            There are some books I would highly recommend.
+          </p>
+        </div>
+        <a href='./reading/index.html'><img id='recentReadingImage' style='height:300px;'></a>
+      </div>
+
+    </div>
     </div>
   </body>
 </html>
