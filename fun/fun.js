@@ -42,6 +42,13 @@ function setHikingContent() {
 }
 let books = [
   {
+    "title" : "Other Minds",
+    "author" : "Peter Godfrey-Smith",
+    "image" : "otherMinds.jpg",
+    "date" : "May 9th",
+    "description" : "",
+  },
+  {
     "title" : "Not A Scientist",
     "author" : "Dave Levitan",
     "image" : "notAScientist.jpg",
