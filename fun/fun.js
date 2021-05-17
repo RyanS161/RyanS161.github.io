@@ -42,6 +42,13 @@ function setHikingContent() {
 }
 let books = [
   {
+    "title" : "The Future of Humanity",
+    "author" : "Michio Kaku",
+    "image" : "futureOfHumanity.jpg",
+    "date" : "May 17th",
+    "description" : "",
+  },
+  {
     "title" : "Other Minds",
     "author" : "Peter Godfrey-Smith",
     "image" : "otherMinds.jpg",
