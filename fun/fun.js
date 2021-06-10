@@ -42,6 +42,41 @@ function setHikingContent() {
 }
 let books = [
   {
+    "title" : "Every Tool's a Hammer",
+    "author" : "Adam Savage",
+    "image" : "everyToolsAHammer.jpg",
+    "date" : "June 9th",
+    "description" : "",
+  },
+  {
+    "title" : "The Radium Girls",
+    "author" : "Kate Moore",
+    "image" : "radiumGirls.jpg",
+    "date" : "June 8th",
+    "description" : "",
+  },
+  {
+    "title" : "Astrophysics for People in a Hurry",
+    "author" : "Neil deGrasse Tyson",
+    "image" : "astrophysicsForPeopleInAHurry.jpg",
+    "date" : "June 3rd",
+    "description" : "",
+  },
+  {
+    "title" : "Blink",
+    "author" : "Malcolm Gladwell",
+    "image" : "blink.jpg",
+    "date" : "June 2nd",
+    "description" : "",
+  },
+  {
+    "title" : "Steve Jobs",
+    "author" : "Walter Isaacson",
+    "image" : "steveJobs.jpg",
+    "date" : "May 23rd",
+    "description" : "",
+  },
+  {
     "title" : "The Future of Humanity",
     "author" : "Michio Kaku",
     "image" : "futureOfHumanity.jpg",
