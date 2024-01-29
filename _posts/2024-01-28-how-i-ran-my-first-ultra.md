@@ -5,7 +5,7 @@ date:   2024-01-28 12:00:00
 description: My experience at the Sawmill 50k
 tags: running
 categories: 
-thumbnail: assets/img/9.jpg
+thumbnail: assets/img/sawmill50k/stauton_state_park.jpg
 ---
 
 I decided in early October that I wanted to run a race in December, but I couldn't find any marathons or half marathons that looked particularly appealing in Colorado. However, there were two 50ks to choose from in early December, and one of them was trail race. So I decided I would sign up for the [Sawmill 50k](https://humanpotentialrunning.com/sawmill/) in Stauton State Park for my first trail race, as well as my first ultramarathon.
