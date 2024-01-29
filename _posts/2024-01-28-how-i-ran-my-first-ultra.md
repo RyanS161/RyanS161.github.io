@@ -3,7 +3,7 @@ layout: post
 title:  How I ran my first ultramarathon
 date:   2024-01-28 12:00:00
 description: My experience at the Sawmill 50k
-tags: running
+tags: running, outdoors
 categories: 
 thumbnail: assets/img/sawmill50k/stauton_state_park.jpg
 ---
