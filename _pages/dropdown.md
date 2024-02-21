@@ -1,13 +1,13 @@
 ---
 layout: page
-title: submenus
+title: More
 nav: false
-nav_order: 6
+nav_order: 10
 dropdown: true
 children: 
-    - title: publications
-      permalink: /publications/
-    - title: divider
-    - title: projects
-      permalink: /projects/
+    - title: LSM eportfolio
+      permalink: /lsm_eportfolio/
+    # - title: divider
+    # - title: projects
+    #   permalink: /projects/
 ---
