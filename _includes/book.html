@@ -1,17 +1,24 @@
 <!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-    <a href="{{ book.url | relative_url }}">
-      <div class="card hoverable">
-        {%- if book.img %}
-        {%- include figure.html
-          path=book.img
-          alt="book thumbnail" -%}
-        {%- endif %}
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">{{ book.title }}</h2>
-          <p class="card-text">{{ book.description }}</p>
-        </div>
-      </div>
-    </a>
-</div>
+<tr>
+  <td>
+    {% if book.review -%}
+      <a href="{{ book.url | relative_url }}">
+        <b>{{ book.title }}</b>
+      </a>
+    {% else -%}
+      <b>{{ book.title }}</b>
+    {% endif %}
+      <br>
+      <i>{{ book.author }}</i>
+  </td>
+  <td>
+    <p>{{ book.read_date | date: "%B %Y" }}</p>
+  </td>
+  <td>
+    <div class="rating">
+      {% for star in (1..book.rating) %}
+        <i class="fa fa-star"></i>
+      {% endfor %}
+    </div>
+  </td>
+</tr>
