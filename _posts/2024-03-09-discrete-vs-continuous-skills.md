@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Discrete vs Continuous Skills
-date:   2024-02-17 12:00:00
+date:   2024-03-09 12:00:00
 description: Categorizing skills and hobbies by progression type
 tags: 
 categories: 
