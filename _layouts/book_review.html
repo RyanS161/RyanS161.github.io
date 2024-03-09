@@ -5,23 +5,21 @@ layout: default
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title"> {{ page.title }}</h1>
+            <a href="{{page.book_url}}" target="_blank"><h1 class="post-title"> {{ page.title }}</h1></a>
             <p class="post-description">By {{ page.author }}</p>
           </header>
 
           <article>
+            <div class="rating">
+              My Rating:
+              {% for star in (1..page.rating) %}
+                <i class="fa fa-star"></i>
+              {% endfor %}
+            </div>
+            <br>
             {{ content }}
           </article>
 
-          {%- if page.related_publications != null and page.related_publications.size > 0 -%}
-          {% assign publications = page.related_publications | replace: ", ", "," | split: "," | join: "|" %}
-          <h2>References</h2>
-          <div class="publications">
-            {% bibliography -f {{ site.scholar.bibliography }} -q @*[key^={{ publications }}]* %}
-          </div>
-          {%- endif %}
-
-          {%- if site.giscus.repo and page.giscus_comments -%}
-            {% include giscus.html %}
-          {%- endif -%}
         </div>
+    
+        <a href="/reading"> ← All books </a>
