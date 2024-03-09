@@ -22,35 +22,35 @@
       "position": "Software Engineer Intern, Test",
       "startDate": "2023-05-01",
       "endDate": "2023-07-01",
-      "summary": "Led transition in firmware testing infrastructure from Robot Framework to Python. Worked with Hardware-in-the-Loop tester to assess flaws in vehicle controller and monitor firmware."
+      "summary": "- Led transition in firmware testing infrastructure from Robot Framework to Python.<br>- Worked with Hardware-in-the-Loop tester to assess flaws in vehicle controller and monitor firmware."
     },
     {
       "name": "Company Six",
       "position": "Robotics Intern",
       "startDate": "2022-05-01",
       "endDate": "2023-02-01",
-      "summary": "Took full ownership of development and user testing of consumer-facing iOS application. Contributed to embedded software and back-end web development by building out and debugging new features. Took on other startup-related tasks, including robot repair and wrangling, destructive mechanical testing, and UI/UX design."
+      "summary": "- Took full ownership of development and user testing of consumer-facing iOS application.<br>- Contributed to embedded software and back-end web development by building out and debugging new features.<br>- Took on other startup-related tasks, including robot repair and wrangling, destructive mechanical testing, and UI/UX design."
     },
     {
       "name": "University of Colorado",
       "position": "Research Assistant",
       "startDate": "2022-02-01",
       "endDate": "2022-07-01",
-      "summary": "Worked on NASA virtual reality project in Bioastronautics lab to produce astronaut training simulation. Implemented server communication using MongoDB and Node.js for long-term data storage. Developed key simulation features in Unity and C#."
+      "summary": "- Worked on NASA virtual reality project in Bioastronautics lab to produce astronaut training simulation.<br>- Implemented server communication using MongoDB and Node.js for long-term data storage.<br>- Developed key simulation features in Unity and C#."
     },
     {
       "name": "University of Colorado",
       "position": "Teaching Assistant",
       "startDate": "2021-08-01",
       "endDate": "2021-12-01",
-      "summary": "Taught First-Year Engineering Projects (GEEN 1400) during the Fall of 2021. Worked with 30 students on prototyping skills, design thinking, and iteration. Provided instruction on tools and software such as 3D printers, Laser Cutters, CAD software, and Arduino."
+      "summary": "- Taught First-Year Engineering Projects (GEEN 1400) during the Fall of 2021.<br>- Worked with 30 students on prototyping skills, design thinking, and iteration.<br>- Provided instruction on tools and software such as 3D printers, Laser Cutters, CAD software, and Arduino."
     },
     {
       "name": "Accu-Precision",
       "position": "Software Engineering Intern",
       "startDate": "2021-05-01",
       "endDate": "2021-08-01",
-      "summary": "Increased throughput in machining, inspection, and logistics. Developed two desktop C# applications to autofill hundreds of measurements into a custom inspection report, saving hours of labor each week. Created database queries to improve part tracking. Added safety measures for CNC lathes and mills post-processors."
+      "summary": "- Increased throughput in machining, inspection, and logistics.<br>- Developed two desktop C# applications to autofill hundreds of measurements into a custom inspection report, saving hours of labor each week.<br>- Created database queries to improve part tracking.<br>- Added safety measures for CNC lathes and mills post-processors."
     }
   ],
   "volunteer": [],
