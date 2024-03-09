@@ -1,0 +1,17 @@
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+    <a href="{{ book.url | relative_url }}">
+      <div class="card hoverable">
+        {%- if book.img %}
+        {%- include figure.html
+          path=book.img
+          alt="book thumbnail" -%}
+        {%- endif %}
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">{{ book.title }}</h2>
+          <p class="card-text">{{ book.description }}</p>
+        </div>
+      </div>
+    </a>
+</div>
