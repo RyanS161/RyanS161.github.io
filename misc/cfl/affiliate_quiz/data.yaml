@@ -1,0 +1,339 @@
+affiliates:
+  - name: Air Force ROTC
+    url: https://www.colorado.edu/afrotc/
+    years_remaining: 3
+
+  - name: Army ROTC
+    url: https://www.colorado.edu/arotc/
+    years_remaining: 2
+
+  - name: Business Leadership Certificate
+    url: https://www.colorado.edu/business/programs/leeds-certificate-programs/business-leadership-certificate
+    degree_level: undergraduate
+    college: Leeds School of Business
+
+  - name: Center for Ethics and Social Responsibility
+    url: https://www.colorado.edu/business/CESR
+    college: Leeds School of Business
+
+  - name: Certificate in Social Innovation Program
+    url: https://www.colorado.edu/programs/socialinnovation/
+    degree_level: undergraduate
+
+  - name: Dalai Lama Fellows
+    url: https://www.colorado.edu/crowninstitute/dalai-lama-fellows-program#learn_more_about_the_cu_boulder_chapter-3392
+    college: Leeds School of Business
+
+  - name: Engineering Leadership Program
+    url: https://www.colorado.edu/engineeringleadershipprogram/
+    college: College of Engineering & Applied Science
+
+  - name: Engineering Management Program
+    url: https://www.colorado.edu/emp/
+    college: College of Engineering & Applied Science
+
+  - name: Entrepreneurship Center for Music
+    url: https://www.colorado.edu/music/academics/centers-and-programs/entrepreneurship-center-music
+    college: College of Music
+
+  - name: Herd Leadership Council
+    url: https://www.colorado.edu/theherd/herdleadershipcouncil
+    enrollment_status: full-time
+
+  - name: INVST Community Leadership Program
+    url: https://www.colorado.edu/invst/
+    years_remaining: 2
+
+  - name: Leadership & Community Engagement Major
+    url: https://www.colorado.edu/education/academics/undergraduate-programs/ba-leadership-community-engagement
+    college: College of Arts and Sciences
+
+  - name: Leadership Studies Minor
+    url: https://www.colorado.edu/lsm/
+    degree_level: undergraduate
+
+  - name: Learning Assistant Program
+    url: https://www.colorado.edu/program/learningassistant/
+    degree_level: undergraduate
+
+  - name: Leeds Consulting Group
+    url: https://www.leedsconsultinggroup.com/
+    years_remaining: 1
+
+  - name: Leeds Global Initiatives & Programs
+    url: https://www.colorado.edu/business/student-resources/global-initiatives
+    college: Leeds School of Business
+
+  - name: Leeds Scholars
+    url: https://www.colorado.edu/business/resources/leeds-scholars
+    years_remaining: 3
+
+  - name: Multicultural Leadership Scholars
+    url: https://www.colorado.edu/lsm/multicultural-leadership-scholars-0
+    degree_level: undergraduate
+
+  - name: Presidents Leadership Class
+    url: https://www.colorado.edu/plc/
+    years_remaining: 3
+
+  - name: Peace, Conflict, and Security Program
+    url: https://www.colorado.edu/pacs/
+    degree_level: undergraduate
+
+  - name: Conference on World Affairs
+    url: https://www.colorado.edu/cwa/
+
+  - name: Innovation & Entrepreneurship Initiative
+    url: https://www.colorado.edu/innovate/
+
+  - name: Journey Leaders Program
+    url: https://www.colorado.edu/orientation/leader-info
+
+  - name: Volunteer Resource Center
+    url: https://www.colorado.edu/volunteer/leadership-opportunities
+
+  - name: Student Academic Success Center
+    url: https://www.colorado.edu/sasc/
+    other: Should be an underrepresented, low-income, first-generation, disabled, or non-traditional student.
+
+  - name: SCRIPPS Leadership & Career Development Program
+    url: https://cubuffs.com/sports/lcdp
+    other: Must be a student athlete
+
+  - name: Residence Hall Association
+    url: https://www.colorado.edu/living/rha
+
+  - name: Navy ROTC
+    url: https://www.colorado.edu/nrotc/
+
+  - name: Outdoor Pursuits
+    url: https://www.colorado.edu/recreation/outdoor-pursuits
+
+  - name: CU GOLD
+    url: https://www.colorado.edu/involvement/leadership
+
+  - name: Education Abroad
+    url: http://abroad.colorado.edu/
+
+  - name: Master of Science in Organizational Leadership
+    url: https://www.colorado.edu/program/msol/
+
+
+
+fun_questions:
+- q: Choose a Weekend Activity
+  answers:
+    - a: Volunteering at a local community center
+      affiliates:
+        - Center for Ethics and Social Responsibility
+        - Dalai Lama Fellows
+        - Herd Leadership Council
+        - INVST Community Leadership Program
+        - Volunteer Resource Center
+    - a: Attending a political debate or event
+      affiliates:
+        - Peace, Conflict, and Security Program
+        - Conference on World Affairs
+    - a: Participating in an engineering or innovation challenge
+      affiliates:
+        - Engineering Management Program
+        - Engineering Leadership Program
+    - a: Networking at a business conference
+      affiliates:
+        - Master of Science in Organizational Leadership
+        - Business Leadership Certificate
+        - Leeds Consulting Group
+        - Leeds Global Initiatives & Programs
+        - Leeds Scholars
+- q: What's Your Preferred Work Environment?
+  answers:
+    - a: In the great outdoors
+      affiliates:
+        - Air Force ROTC
+        - Army ROTC
+        - Navy ROTC
+        - Outdoor Pursuits
+    - a: In a bustling city
+      affiliates:
+        - Leadership & Community Engagement Major
+        - Conference on World Affairs
+        - Journey Leaders Program
+        - Residence Hall Association
+        - Education Abroad
+    - a: In a tech lab or workshop
+      affiliates:
+        - Certificate in Social Innovation Program
+        - Engineering Leadership Program
+        - Engineering Management Program
+        - Innovation & Entrepreneurship Initiative
+    - a: In a boardroom or office setting
+      affiliates:
+        - Master of Science in Organizational Leadership
+        - Business Leadership Certificate
+        - Leeds Consulting Group
+        - Leeds Global Initiatives & Programs
+        - Leeds Scholars
+- q: Which Social Cause Resonates with You the Most?
+  answers:
+    - a: Environmental conservation
+      affiliates:
+        - Center for Ethics and Social Responsibility
+        - Conference on World Affairs
+        - Outdoor Pursuits
+    - a: Social justice and equality
+      affiliates:
+        - Certificate in Social Innovation Program
+        - Dalai Lama Fellows
+        - INVST Community Leadership Program
+        - Multicultural Leadership Scholars
+        - Peace, Conflict, and Security Program
+        - Volunteer Resource Center
+        - Student Academic Success Center
+        - Residence Hall Association
+    - a: Education and innovation
+      affiliates:
+        - Entrepreneurship Center for Music
+        - Leadership & Community Engagement Major
+        - Leadership Studies Minor
+        - Learning Assistant Program
+        - Innovation & Entrepreneurship Initiative
+        - Education Abroad
+    - a: Economic development
+      affiliates:
+        - Business Leadership Certificate
+        - Leeds Consulting Group
+        - SCRIPPS Leadership & Career Development Program
+        - Master of Science in Organizational Leadership
+- q: What's Your Favorite Leadership Movie?
+  answers:
+    - a: "Dead Poets Society"
+      affiliates:
+        - Leadership & Community Engagement Major
+        - Leadership Studies Minor
+        - Learning Assistant Program
+        - Presidents Leadership Class
+        - Journey Leaders Program
+        - CU GOLD
+    - a: "The West Wing"
+      affiliates:
+        - Air Force ROTC
+        - Army ROTC
+        - Peace, Conflict, and Security Program
+        - Conference on World Affairs
+        - Navy ROTC
+        - Master of Science in Organizational Leadership
+    - a: "The Social Network"
+      affiliates:
+        - Engineering Leadership Program
+        - Engineering Management Program
+        - Innovation & Entrepreneurship Initiative
+    - a: "The Pursuit of Happyness"
+      affiliates:
+        - Center for Ethics and Social Responsibility
+        - Multicultural Leadership Scholars
+        - Student Academic Success Center
+        - SCRIPPS Leadership & Career Development Program
+- q: Pick a Superpower
+  answers:
+    - a: Healing and empathy
+      affiliates:
+        - Center for Ethics and Social Responsibility
+        - Certificate in Social Innovation Program
+        - Dalai Lama Fellows
+        - INVST Community Leadership Program
+        - Learning Assistant Program
+        - Multicultural Leadership Scholars
+        - Volunteer Resource Center
+        - Student Academic Success Center
+        - Residence Hall Association
+    - a: Mind-reading and strategy
+      affiliates:
+        - Business Leadership Certificate
+        - Herd Leadership Council
+        - Leeds Consulting Group
+        - Leeds Global Initiatives & Programs
+        - Leeds Scholars
+        - Presidents Leadership Class
+        - Peace, Conflict, and Security Program
+        - Navy ROTC
+        - Master of Science in Organizational Leadership
+    - a: Shape-shifting and adaptability
+      affiliates:
+        - Presidents Leadership Class
+        - Conference on World Affairs
+        - Journey Leaders Program
+        - SCRIPPS Leadership & Career Development Program
+        - CU GOLD
+    - a: Time manipulation and efficiency
+      affiliates:
+        - Engineering Leadership Program
+        - Engineering Management Program
+        - Innovation & Entrepreneurship Initiative
+- q: Choose a Book Genre
+  answers:
+    - a: Non-fiction and memoirs
+      affiliates:
+        - Dalai Lama Fellows
+        - Entrepreneurship Center for Music
+        - Conference on World Affairs
+        - Journey Leaders Program
+        - Volunteer Resource Center
+        - Student Academic Success Center
+        - Education Abroad
+    - a: Political thrillers and mysteries
+      affiliates:
+        - Center for Ethics and Social Responsibility
+    - a: Science fiction and innovation
+      affiliates:
+        - Certificate in Social Innovation Program
+        - Engineering Leadership Program
+        - Engineering Management Program
+        - Innovation & Entrepreneurship Initiative
+    - a: Business and leadership
+      affiliates:
+        - Air Force ROTC
+        - Army ROTC
+        - Business Leadership Certificate
+        - Leadership & Community Engagement Major
+        - Leadership Studies Minor
+        - Leeds Consulting Group
+        - Leeds Global Initiatives & Programs
+        - Leeds Scholars
+        - Presidents Leadership Class
+        - Navy ROTC
+        - Master of Science in Organizational Leadership
+- q: What's Your Favorite Type of Team Building Activity?
+  answers:
+    - a: Outdoor adventure challenges
+      affiliates:
+        - Air Force ROTC
+        - Army ROTC
+        - Journey Leaders Program
+        - Navy ROTC
+        - Outdoor Pursuits
+        - Education Abroad
+    - a: Debates and discussions
+      affiliates:
+        - Center for Ethics and Social Responsibility
+        - Certificate in Social Innovation Program
+        - Engineering Leadership Program
+        - Leeds Scholars
+        - Multicultural Leadership Scholars
+        - Peace, Conflict, and Security Program
+        - Conference on World Affairs
+    - a: Hackathons and innovation workshops
+      affiliates:
+        - Engineering Leadership Program
+        - Innovation & Entrepreneurship Initiative
+        - Dalai Lama Fellows
+    - a: Networking events and business simulations
+      affiliates:
+        - Business Leadership Certificate
+        - Engineering Management Program
+        - Herd Leadership Council
+        - Leeds Consulting Group
+        - Leeds Global Initiatives & Programs
+        - Leeds Scholars
+        - Presidents Leadership Class
+        - SCRIPPS Leadership & Career Development Program
+        - Master of Science in Organizational Leadership
