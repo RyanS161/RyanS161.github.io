@@ -1,16 +1,22 @@
 {
   "basics": {
     "name": "Ryan Slocum",
-    "position": "Software Engineer",
+    "position": "Robotics Software Engineer",
     "image": "",
-    "email": "ryan.slocum@colorado.edu",
+    "email": "rslocum@student.ethz.ch",
     "phone": "",
-    "summary": "Fourth-year Computer Science undergrad at CU Boulder"
+    "summary": "Robotics Grad Student at ETH Zürich"
   },
   "education": [
     {
-      "institution": "B.S. Computer Science",
-      "area": "3.98 GPA",
+      "institution": "MSc Robotics, Systems and Control",
+      "studyType": "ETH Zürich",
+      "startDate": "2024-09-01",
+      "endDate": "2026-06-01"
+    },
+    {
+      "institution": "BSc Computer Science",
+      "area": "3.99 GPA",
       "studyType": "University of Colorado Boulder",
       "startDate": "2020-08-01",
       "endDate": "2024-05-01"
