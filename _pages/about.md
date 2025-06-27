@@ -6,7 +6,7 @@ subtitle: Robotics, Systems and Controls at ETH Zürich
 
 profile:
   align: right
-  image: headshot.jpg
+  image: _headshot.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p style="text-align:center" id="email">rslocum@<span>ethz</span>.<span>example.</span>ch</p>
