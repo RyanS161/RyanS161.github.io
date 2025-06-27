@@ -3,7 +3,7 @@ layout: page
 title: Reading
 permalink: /reading/
 description: 
-nav: true
+nav: false
 nav_order: 4
 horizontal: false
 ---
