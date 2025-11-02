@@ -9,7 +9,7 @@ category: academic
 ---
 
 ##### February 2025 - June 2025
-###### [Report](/assets/pdf/shortcircuit_finalreport.pdf)
+###### [Report](/assets/pdf/PLR_Report_Loetscher_Slocum.pdf)
 
 
 For my first project class at ETH, Perception and Learning for Robotics, my partner and I worked on developing a model for semantic and elevation Birds-Eye-View (BEV) mapping. The model was meant to serve as a benchmark for the recently created dataset [TartanGround](https://tartanair.org/tartanground/index.html).
