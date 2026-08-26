@@ -1,0 +1,131 @@
+---
+import SocialList from "@/components/SocialList.astro";
+import PageLayout from "@/layouts/Base.astro";
+
+const education = [
+	{
+		date: "Sep 2024 – present",
+		title: "M.S. Robotics, Systems and Controls",
+		org: "ETH Zurich",
+		desc: "Coursework and practical experience spanning deep learning, planning, perception, and control.",
+	},
+	{
+		date: "Aug 2020 – May 2024",
+		title: "B.S. Computer Science",
+		org: "University of Colorado Boulder",
+		desc: "Senior Thesis at the Autonomous Robotics and Perception Group. Involved with the Presidents Leadership Class and Engineering Leadership Program.",
+	},
+];
+
+const experience = [
+	{
+		date: "Feb 2026 - Jul 2026",
+		title: "Perception Software Engineer Intern",
+		org: "ANYbotics",
+		url: "https://www.anybotics.com",
+		desc: "Developed a repeatable and automated SLAM validation pipeline for the Spatial Intelligence team.",
+	},
+	{
+		date: "May 2023 - Jul 2023",
+		title: "Software Engineer Intern, Test",
+		org: "Outrider",
+		url: "https://www.outrider.ai/",
+		desc: "Led transition in firmware testing infrastructure from Robot Framework to Python.",
+	},
+	{
+		date: "May 2022 - Feb 2023",
+		title: "Robotics Intern",
+		org: "Company Six",
+		desc: "Took full ownership of development and user testing of consumer-facing iOS application.",
+	},
+	{
+		date: "May 2021 - Aug 2021",
+		title: "Software Engineering Intern",
+		org: "Accu-Precision",
+		desc: "Developed applications to autofill hundreds of measurements per machined part into a custom inspection report",
+	},
+];
+---
+
+<PageLayout meta={{ title: "Home", description: "Ryan Slocum — robotics software engineer and MS student at ETH Zurich." }}>
+	<!-- Hero -->
+	<section class="sm:flex sm:items-start sm:gap-8 mb-16">
+		<img
+			alt="Ryan Slocum"
+			class="mb-6 h-32 w-32 rounded-full object-cover sm:mb-0 sm:h-36 sm:w-36 sm:shrink-0"
+			src="/images/ryanslocum.jpg"
+		/>
+		<div>
+			<h1 class="title mb-1">Ryan Slocum</h1>
+			<p class="text-muted mb-5 text-sm">Robotics, Systems and Controls · ETH Zurich</p>
+			<div class="prose prose-sm prose-cactus max-w-none mb-6">
+				<p>
+					Hi there! I'm a graduate student pursuing my MS in Robotics, Systems and Controls at ETH
+					Zurich, focused on learning for perception and control.
+				</p>
+				<p>
+					Take a look at my <a class="cactus-link" href="/projects/">projects</a>, check out my{" "}
+					<a class="cactus-link" href="/resume.pdf" rel="noreferrer" target="_blank">resume</a>, and
+					feel free to reach out! I'd be happy to hear from you.
+				</p>
+			</div>
+			<SocialList />
+		</div>
+	</section>
+
+	<!-- Education -->
+	<section>
+		<h2 class="title mb-8 text-xl">Education</h2>
+		<ol class="relative" role="list">
+			{
+				education.map((item, i) => (
+					<li class="relative flex gap-6 pb-10 last:pb-0">
+						{i < education.length - 1 && (
+							<div class="absolute left-[10.8rem] top-6 bottom-0 w-px bg-gray-200 dark:bg-gray-700" />
+						)}
+						<div class="shrink-0 pt-0.5 text-right" style="width:9rem">
+							<span class="text-muted font-mono text-xs leading-5 whitespace-nowrap">{item.date}</span>
+						</div>
+						<div class="relative mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-accent ring-2 ring-global-bg" />
+						<div class="min-w-0 flex-1">
+							<p class="font-semibold leading-snug">{item.title}</p>
+							<p class="text-muted text-sm">{item.org}</p>
+							<p class="mt-1.5 text-sm">{item.desc}</p>
+						</div>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<!-- Experience -->
+	<section class="mb-14">
+		<h2 class="title mb-8 text-xl">Experience</h2>
+		<ol class="relative" role="list">
+			{
+				experience.map((item, i) => (
+					<li class="relative flex gap-6 pb-10 last:pb-0">
+						{i < experience.length - 1 && (
+							<div class="absolute left-[10.8rem] top-6 bottom-0 w-px bg-gray-200 dark:bg-gray-700" />
+						)}
+						<div class="shrink-0 pt-0.5 text-right" style="width:9rem">
+							<span class="text-muted font-mono text-xs leading-5 whitespace-nowrap">{item.date}</span>
+						</div>
+						<div class="relative mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-accent ring-2 ring-global-bg" />
+						<div class="min-w-0 flex-1">
+							<p class="font-semibold leading-snug">{item.title}</p>
+							{item.url ? (
+								<a class="cactus-link text-muted text-sm" href={item.url} rel="noreferrer" target="_blank">
+									{item.org}
+								</a>
+							) : (
+								<p class="text-muted text-sm">{item.org}</p>
+							)}
+							<p class="mt-1.5 text-sm">{item.desc}</p>
+						</div>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+</PageLayout>

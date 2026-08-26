@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+
+const socialLinks: {
+	friendlyName: string;
+	link: string;
+	name: string;
+}[] = [
+	{
+		friendlyName: "GitHub",
+		link: "https://github.com/ryans161",
+		name: "mdi:github",
+	},
+	{
+		friendlyName: "LinkedIn",
+		link: "https://linkedin.com/in/ryanslocum",
+		name: "mdi:linkedin",
+	},
+	{
+		friendlyName: "Email",
+		link: "mailto:rslocum@ethz.ch",
+		name: "mdi:email",
+	},
+];
+---
+
+<div class="flex flex-wrap items-center gap-x-4">
+	<ul class="flex items-center gap-x-3">
+		{
+			socialLinks.map(({ friendlyName, link, name }) => (
+				<li class="flex">
+					<a
+						class="hover:text-link inline-block"
+						href={link}
+						rel="noreferrer"
+						target={link.startsWith("mailto") ? "_self" : "_blank"}
+					>
+						<Icon aria-hidden="true" class="h-7 w-7" focusable="false" name={name} />
+						<span class="sr-only">{friendlyName}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</div>

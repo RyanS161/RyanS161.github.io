@@ -1,0 +1,43 @@
+{
+	"name": "astro-cactus",
+	"type": "module",
+	"version": "8.2.0",
+	"private": false,
+	"scripts": {
+		"postinstall": "npm rebuild sharp --force",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"check": "astro check && biome check",
+		"lint": "biome check --write",
+		"format": "prettier -w . --cache"
+	},
+	"dependencies": {
+		"@astrojs/markdown-satteri": "^0.3.7",
+		"@astrojs/mdx": "7.0.7",
+		"@astrojs/sitemap": "3.7.3",
+		"@tailwindcss/vite": "4.3.3",
+		"astro": "7.2.4",
+		"astro-expressive-code": "^0.44.1",
+		"astro-icon": "^1.2.0",
+		"satteri": "^0.10.5",
+		"sharp": "^0.35.3",
+		"tailwindcss": "^4.3.3"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.10",
+		"@biomejs/biome": "^2.5.10",
+		"@iconify-json/mdi": "^1.2.2",
+		"@tailwindcss/typography": "^0.5.20",
+		"@types/node": "^26.2.0",
+		"autoprefixer": "^10.5.4",
+		"prettier": "^3.9.6",
+		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-tailwindcss": "^0.8.1",
+		"typescript": "^6.0.3"
+	},
+	"overrides": {
+		"sharp": "^0.35.3"
+	}
+}
