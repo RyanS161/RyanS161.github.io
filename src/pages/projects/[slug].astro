@@ -1,0 +1,63 @@
+---
+import { getCollection, render } from "astro:content";
+import PageLayout from "@/layouts/Base.astro";
+
+export async function getStaticPaths() {
+	const projects = await getCollection("project");
+	return projects.map((project) => ({
+		params: { slug: project.id },
+		props: { project },
+	}));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const typeBadge: Record<string, string> = {
+	project: "Project",
+	paper: "Paper",
+	poster: "Poster",
+	thesis: "Thesis",
+	preprint: "Preprint",
+};
+---
+
+<PageLayout meta={{ title: project.data.title, description: project.data.description }}>
+	<a class="cactus-link mb-8 inline-block text-sm" href="/projects/">&larr; Back to Projects</a>
+
+	<header class="mb-8">
+		<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+			<h1 class="title">{project.data.title}</h1>
+			<span class="text-accent bg-accent/10 rounded px-1.5 py-0.5 text-xs font-mono">
+				{typeBadge[project.data.type]}
+			</span>
+			<span class="text-muted text-xs">{project.data.year}</span>
+		</div>
+		{project.data.venue && <p class="text-muted text-sm italic mb-3">{project.data.venue}</p>}
+		{
+			project.data.links && project.data.links.length > 0 && (
+				<div class="flex flex-wrap gap-x-3 gap-y-1">
+					{project.data.links.map((l) => (
+						<a class="cactus-link text-xs font-mono" href={l.url} rel="noreferrer" target="_blank">
+							[{l.label}]
+						</a>
+					))}
+				</div>
+			)
+		}
+	</header>
+
+	{
+		project.data.image && (
+			<img
+				alt={project.data.title}
+				class="mb-8 w-full rounded object-cover max-h-72"
+				src={project.data.image}
+			/>
+		)
+	}
+
+	<div class="prose prose-sm prose-cactus max-w-none">
+		<Content />
+	</div>
+</PageLayout>

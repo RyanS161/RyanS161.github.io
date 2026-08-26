@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: monthly
+      interval: weekly
     groups:
       actions-deps:
         patterns:
@@ -16,7 +16,7 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     groups:
       patch-minor:
         update-types: ["patch", "minor"]

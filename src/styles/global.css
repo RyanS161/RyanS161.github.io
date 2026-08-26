@@ -1,11 +1,9 @@
-@layer theme, base, pagefind, components, utilities;
+@layer theme, base, components, utilities;
 
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-/* tailwind to ignore satori generated og-image */
-@source not "../pages/og-image";
 /* config for tailwindcss-typography plugin */
 @config "../../tailwind.config.ts";
 
@@ -116,9 +114,6 @@
 }
 
 @layer components {
-	@import "./components/admonition.css";
-	@import "./components/github-card.css";
-
 	.cactus-link {
 		@apply hover:decoration-link underline underline-offset-2 hover:decoration-2;
 	}
