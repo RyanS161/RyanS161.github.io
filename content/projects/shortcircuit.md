@@ -1,4 +1,5 @@
 ---
+
 title: "Short Circuit: Autonomous Racing"
 type: "project"
 description: "Built and programmed a 1/10th-scale autonomous racing vehicle with ROS1."
@@ -6,8 +7,9 @@ year: 2023
 sortIndex: 1
 image: "./images/shortcircuit/racer.jpeg"
 links:
-  - label: "Report"
-    url: "/pdfs/projects/shortcircuit/finalreport.pdf"
+- label: "Report"
+  url: "/pdfs/projects/shortcircuit/finalreport.pdf"
+
 ---
 
 Advanced Robotics was the class I was looking forward to most in my time as an undergraduate at CU Boulder, and it did not disappoint. In addition to extremely interesting and varied lectures, we got to work concurrently on an autonomous racing project with the lab's hardware.
@@ -17,8 +19,8 @@ The main task for all teams was to build and program an autonomous vehicle that 
 For control, we implemented a Stanley controller for lateral control, which uses both cross-track error and heading error to generate steering commands. For longitudinal control, we used a PID controller that adjusted speed based on upcoming turn curvature.
 
 | ![Our finished autonomous racing vehicle](./images/shortcircuit/racer.jpeg) |
-|:--:|
-| *Our finished hardware (our team was mostly software engineers 🙃)* |
+| :-------------------------------------------------------------------------: |
+|     _Our finished hardware (our team was mostly software engineers 🙃)_     |
 
 For stop sign detection, we trained a YOLO object detection model on images collected from our car's camera. The detector ran in real time and could reliably identify stop signs from various angles and under varying lighting conditions. When a stop sign was detected, our car would decelerate smoothly to a complete stop before the sign.
 

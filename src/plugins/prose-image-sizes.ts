@@ -1,5 +1,3 @@
-import type { HastPluginDefinition } from "satteri";
-
 /**
  * The article column is capped at `max-w-3xl` (48rem) minus horizontal padding,
  * so a prose image is never laid out wider than ~704 CSS px. Astro derives its
@@ -9,13 +7,18 @@ import type { HastPluginDefinition } from "satteri";
  */
 const PROSE_IMAGE_SIZES = "(min-width: 48rem) 704px, calc(100vw - 2rem)";
 
-export function proseImageSizesPlugin(): HastPluginDefinition {
+type PluginContext = {
+	setProperty: (node: unknown, key: string, value: string) => void;
+};
+
+export function proseImageSizesPlugin() {
 	return {
 		name: "prose-image-sizes",
 		element: {
 			filter: ["img"],
-			visit(node, ctx) {
-				ctx.setProperty(node, "sizes", PROSE_IMAGE_SIZES);
+			visit(node: unknown, ctx: unknown) {
+				const pluginContext = ctx as PluginContext;
+				pluginContext.setProperty(node, "sizes", PROSE_IMAGE_SIZES);
 			},
 		},
 	};

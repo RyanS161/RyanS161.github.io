@@ -5,7 +5,8 @@ export const siteConfig: SiteConfig = {
 	url: "https://ryanslocum.com/",
 	title: "Ryan Slocum",
 	author: "Ryan Slocum",
-	description: "Personal website of Ryan Slocum, a robotics software engineer and MS student at ETH Zurich.",
+	description:
+		"Personal website of Ryan Slocum, a robotics software engineer and MS student at ETH Zurich.",
 	lang: "en-US",
 	ogLocale: "en_US",
 	showLogo: false,
