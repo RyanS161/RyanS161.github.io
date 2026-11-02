@@ -11,12 +11,7 @@ import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.url,
-	integrations: [
-		expressiveCode(expressiveCodeOptions),
-		icon(),
-		sitemap(),
-		mdx(),
-	],
+	integrations: [expressiveCode(expressiveCodeOptions), icon(), sitemap(), mdx()],
 	image: {
 		// Generate a srcset for every optimized image (including markdown ones) so
 		// browsers download a variant sized for their viewport instead of the original.
@@ -26,10 +21,7 @@ export default defineConfig({
 	},
 	markdown: {
 		processor: satteri({
-			hastPlugins: [
-				satteriHeadingIdsPlugin(),
-				proseImageSizesPlugin(),
-			],
+			hastPlugins: [satteriHeadingIdsPlugin(), proseImageSizesPlugin()],
 		}),
 	},
 	vite: {
